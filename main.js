@@ -1,7 +1,7 @@
-import { pi,iva,DIAS_SEMANA,areaCirculo} from "./constantes.js";
-import {aplicarDescuento, aplicarImpuesto, calcularTotal} from "./operaciones-matematicas.js"
-import { suma, resta,multiplicacion,area,aplicarDescuentoPorRol } from "./operaciones-matematicas.js";
 import { pi,iva,DIAS_SEMANA,areaCirculo,aplicarDescuento, aplicarImpuesto, calcularTotal} from "./constantes.js";
+import { aplicarDescuento, aplicarImpuesto, calcularTotal, suma, resta,multiplicacion,area, aplicarDescuentoPorRol} from "./operaciones-matematicas.js"
+import { ROLES } from './usuariosConstantes.js';
+import { crearUsuario, mostrarEstadoAdmin } from './usuarios.js';
 
 console.log('la suma es : '+suma(5, 3)); 
 console.log('la resta es: '+resta(10, 4)); 
@@ -25,3 +25,13 @@ let compraCliente_productoUnit=50;
 let cantidadCompraAdmin=4;
 let cantidadCompraCliente=3;
 let subtotalAdmin=calcularTotal(compraAdmin_productoUnit,cantidadCompraAdmin);
+
+//  Ejercicio 4
+const usuario1 = crearUsuario("Pedro", ROLES.ADMIN);
+const usuario2 = crearUsuario("Carlos", ROLES.CLIENTE);
+
+console.log(usuario1);
+console.log(usuario2);
+
+mostrarEstadoAdmin(usuario1); // Pedro es Administrador.
+mostrarEstadoAdmin(usuario2); // Carlos es Cliente regular.

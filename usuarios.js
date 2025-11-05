@@ -16,3 +16,8 @@ export function crearUsuario(nombre, rol){
         fechaRegistro: obtenerFechaRegistro()
     };
 };
+
+export function mostrarEstadoAdmin (usuario){
+    const estado = esAdmin(usuario) ? "es Administrador" : "es Cliente regular";
+    console.log(`- ${usuario.nombre} ${estado}.`);
+};
