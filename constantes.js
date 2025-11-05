@@ -1,3 +1,5 @@
+export const PI = Math.PI;
+export const MENSAJE_BIENVENIDA = "Bienvenido a la calculadora";
 
 export const pi = 3.1416;
 export const iva = 0.19;

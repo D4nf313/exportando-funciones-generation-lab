@@ -1,7 +1,30 @@
-import { iva, DESCUENTO } from "./constantes.js";
+import { PI, MENSAJE_BIENVENIDA ,iva,DESCUENTO} from './constantes.js';
+//import { iva, DESCUENTO } from "./constantes.js";
+export function suma(a,b) {
+    return a + b;
+}
+
+export function resta(a,b) {
+    return a - b;
+}
+export function multiplicacion(a,b) {
+    return a *b;
+}
+export function area(r){
+ 
+    return PI*r**2;
+}
 
 
 
+export function aplicarDescuentoPorRol(total,usuario){
+    if (usuario=='admin'){
+        return total*0.20;
+    }else if(usuario=='cliente'){
+        return total*DESCUENTO;
+    }
+   
+}
 
 
 
