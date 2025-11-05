@@ -17,21 +17,6 @@ export function area(r){
 
 
 
-export function aplicarDescuentoPorRol(total,usuario){
-    if (usuario=='admin'){
-        return total*0.20;
-    }else if(usuario=='cliente'){
-        return total*DESCUENTO;
-    }
-   
-}
-
-
-
-
-
-//Ejercicio 3
- 
 export function calcularTotal(precio, cantidad){
     let total= precio *cantidad;
     return total;
@@ -51,6 +36,16 @@ export function aplicarDescuento(total){
 }
 
 
+export function aplicarDescuentoPorRol(total,usuario){
+    if (usuario=='admin'){
+        return total*0.20;
+    }else if(usuario=='cliente'){
+        return total*DESCUENTO;
+    }else{
+                return "Usuario Desconocido";
 
+    }
+   
+}
 
 
