@@ -26,3 +26,10 @@ let compraCliente_productoUnit=50;
 let cantidadCompraAdmin=4;
 let cantidadCompraCliente=3;
 let subtotalAdmin=calcularTotal(compraAdmin_productoUnit,cantidadCompraAdmin);
+console.log("El subtotal del admin fue: " + subtotalAdmin);
+tatalConIva= aplicarImpuesto(subtotalAdmin);
+console.log("El total del iva fue: " + tatalConIva);
+
+
+
+0
