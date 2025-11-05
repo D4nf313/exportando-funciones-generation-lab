@@ -1,6 +1,8 @@
 import { pi,iva,DIAS_SEMANA,areaCirculo} from "./constantes.js";
 import {aplicarDescuento, aplicarImpuesto, calcularTotal} from "./operaciones-matematicas.js"
  
+
+
 console.log(areaCirculo(5));
 console.log(DIAS_SEMANA[3-1])
 
