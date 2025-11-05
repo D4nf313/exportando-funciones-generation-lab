@@ -1,4 +1,3 @@
-import { roles } from "./usuariosConstantes.js";
 
 export function obtenerFechaRegistro(){
     const ahora = new Date();
@@ -11,13 +10,13 @@ export function obtenerFechaRegistro(){
 
 export function crearUsuario(nombre, rol){
     return{
-        nombre,
-        rol,
+        name:nombre,
+        rol:rol,
         fechaRegistro: obtenerFechaRegistro()
     };
-};
+}
 
 export function mostrarEstadoAdmin (usuario){
-    const estado = esAdmin(usuario) ? "es Administrador" : "es Cliente regular";
-    console.log(`- ${usuario.nombre} ${estado}.`);
-};
+    const estado = usuario.rol;
+    console.log(`- ${usuario.name} ${estado}.`);
+}

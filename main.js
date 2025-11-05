@@ -23,8 +23,8 @@ console.log(`Tolal bebidas con Descuento: ${totalConDescuento}`)
 
 
 //  Ejercicio 4
-const usuario1 = crearUsuario("Pedro", roles.ADMIN);
-const usuario2 = crearUsuario("Carlos", roles.CLIENTE);
+const usuario1 = crearUsuario("Pedro", roles.admin);
+const usuario2 = crearUsuario("Carlos", roles.cliente);
 
 console.log(usuario1);
 console.log(usuario2);
@@ -39,17 +39,17 @@ let cantidadCompraAdmin=4;
 let cantidadCompraCliente=3;
 let subtotalAdmin=calcularTotal(compraAdmin_productoUnit,cantidadCompraAdmin);
 console.log("El subtotal del admin fue: " + subtotalAdmin);
-tatalConIvaA= aplicarImpuesto(subtotalAdmin);
-console.log("El total del iva fue: " + tatalConIvaA);
-totalConDescA =  aplicarDescuentoPorRol(totalConIva, "admin")
+let totalConIvaA= aplicarImpuesto(subtotalAdmin);
+console.log("El total con iva fue: " + totalConIvaA);
+let totalConDescA =  aplicarDescuentoPorRol(totalConIvaA, "admin")
 console.log("El total con descuento fue: " + totalConDescA);
 console.log("**********************")
 let subtotalCliente=calcularTotal(compraClienteProductoUnit,cantidadCompraCliente);
-console.log("El subtotal del cliente fue: " + subtotalClient);
-totalConIvaC= aplicarImpuesto(subtotalCliente);
+console.log("El subtotal del cliente fue: " + subtotalCliente);
+let totalConIvaC= aplicarImpuesto(subtotalCliente);
 console.log("El total del iva fue: " +  totalConIvaC);
-totalConDescC =  aplicarDescuentoPorRol(totalConIva, "cliente")
-console.log("El total con descuento fue: " + totalConDesc);
+let totalConDescC =  aplicarDescuentoPorRol(totalConIvaC, "cliente")
+console.log("El total con descuento fue: " + totalConDescC);
 
 
 

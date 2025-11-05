@@ -36,16 +36,19 @@ export function aplicarDescuento(total){
 }
 
 
-export function aplicarDescuentoPorRol(total,usuario){
-    if (usuario=='admin'){
-        return total*0.20;
-    }else if(usuario=='cliente'){
-        return total*DESCUENTO;
-    }else{
-                return "Usuario Desconocido";
+export function aplicarDescuentoPorRol(total, usuario) {
+  const DESCUENTO_CLIENTE = DESCUENTO; // Por ejemplo, 10%
 
-    }
-   
+  if (usuario === 'admin') {
+    return total - (total * 0.20);
+  } else if (usuario === 'cliente') {
+    // Cliente tiene descuento general
+    return total - (total * DESCUENTO_CLIENTE);
+  } else {
+    console.warn("Usuario desconocido, no se aplica descuento.");
+    return total;
+  }
 }
+
 
 
