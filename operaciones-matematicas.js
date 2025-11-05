@@ -35,7 +35,7 @@ export function aplicarDescuentoPorRol(total,usuario){
 export function calcularTotal(precio, cantidad){
     let total= precio *cantidad;
     return total;
-  
+
 }
 
 export function aplicarImpuesto(total){
